@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manual de GitHub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <style>
+    body {
+      background: #0c0c0c;
+      color: white;
+      overflow-x: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    /* Fondo partículas moradas */
+    #bgCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: #0c0c0c;
+    }
+    /* Animación suave al hacer scroll */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease-in-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Texto tipo máquina de escribir */
+    .typing {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #a855f7;
+      border-right: 2px solid #a855f7;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      width: 0;
+      animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fondo animado -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- Navbar superior -->
+  <header class="fixed top-0 left-0 w-full bg-purple-900/70 backdrop-blur-md z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-2xl md:text-3xl font-bold text-purple-300 drop-shadow-[0_0_10px_#9333ea]">
+         Manual GitHub
+      </h1>
+      <nav class="flex gap-4">
+        <a href="index.html" class="hover:text-purple-400 font-semibold">Inicio</a>
+        <a href="manual_git.html" class="hover:text-purple-400 font-semibold">Git</a>
+        <a href="manual_github.html" class="text-purple-400 font-bold underline">GitHub</a>
+        <a href="index.html#proyectos" class="hover:text-purple-400 font-semibold">Proyectos</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="pt-28 px-6 max-w-5xl mx-auto">
+
+    <!-- Hero / Introducción -->
+    <section class="mb-20 text-center fade-in">
+      <h2 class="text-4xl md:text-5xl font-bold text-purple-400 drop-shadow-[0_0_15px_#a855f7] mb-4">
+         GitHub: Tu puente al mundo colaborativo
+      </h2>
+      <!-- Texto dinámico -->
+      <div id="typing-container" class="mb-6 text-xl"></div>
+      <p class="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
+        <span class="font-bold">GitHub</span> es la plataforma en la nube que conecta tu código con el mundo.  
+        Basado en <span class="text-purple-400">Git</span>, te permite <span class="italic">colaborar</span>, 
+        <span class="italic">compartir</span> y <span class="italic">aprender</span> junto a millones de programadores.  
+        Aquí no solo guardas proyectos: construyes tu <span class="font-bold">portafolio profesional</span>.
+      </p>
+      <div class="flex justify-center mt-6">
+        <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_sSF6EG.json" 
+          background="transparent" speed="1" style="width:280px;height:280px;" loop autoplay>
+        </lottie-player>
+      </div>
+      <!-- Botón GitHub centrado -->
+      <div class="mt-6 flex justify-center">
+        <a href="https://github.com/Wikkl20" target="_blank"
+          class="px-8 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-400 hover:text-black transition transform hover:scale-105">
+          🌐 Ir a mi GitHub
+        </a>
+      </div>
+    </section>
+
+    <!-- Sección: Características -->
+    <section class="mb-20 fade-in">
+      <h3 class="text-3xl font-bold text-purple-300 mb-6"> ¿Qué hace especial a GitHub?</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-purple-900/40 p-6 rounded-xl shadow-lg">
+          <h4 class="text-xl font-bold text-purple-400 mb-2"> Repositorios remotos</h4>
+          <p class="text-gray-300">Accede a tu código desde cualquier lugar y compártelo con el mundo.</p>
+        </div>
+        <div class="bg-purple-900/40 p-6 rounded-xl shadow-lg">
+          <h4 class="text-xl font-bold text-purple-400 mb-2"> Colaboración</h4>
+          <p class="text-gray-300">Usa <span class="italic">pull requests</span> y revisiones de código para trabajar en equipo.</p>
+        </div>
+        <div class="bg-purple-900/40 p-6 rounded-xl shadow-lg">
+          <h4 class="text-xl font-bold text-purple-400 mb-2"> Gestión de proyectos</h4>
+          <p class="text-gray-300">Organiza tareas con tableros tipo Kanban gracias a GitHub Projects.</p>
+        </div>
+        <div class="bg-purple-900/40 p-6 rounded-xl shadow-lg">
+          <h4 class="text-xl font-bold text-purple-400 mb-2"> Portafolio personal</h4>
+          <p class="text-gray-300">Muestra tus proyectos con GitHub Pages y crea tu huella digital.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Crear cuenta -->
+    <section class="mb-20 fade-in">
+      <h3 class="text-3xl font-bold text-purple-300 mb-6"> Crear tu cuenta en GitHub</h3>
+      <ol class="list-decimal pl-6 space-y-4 text-gray-300 text-lg">
+        <li>Ingresa a: <a href="https://github.com" target="_blank" class="text-purple-400 underline">https://github.com</a></li>
+        <li>Haz clic en <span class="font-bold">Sign Up</span>.</li>
+        <li>Completa: correo, usuario y contraseña.</li>
+        <li>Verifica tu cuenta desde el correo recibido.</li>
+        <li>Configura tu perfil: foto, biografía y tecnologías favoritas.</li>
+      </ol>
+      <div class="mt-6 p-4 bg-purple-900/40 rounded-xl border border-purple-700 text-center">
+         ¡Ya tienes tu cuenta lista para comenzar!
+      </div>
+    </section>
+
+    <!-- Primeros pasos -->
+    <section class="mb-20 fade-in">
+      <h3 class="text-3xl font-bold text-purple-300 mb-6">⚡ Tus primeros pasos en GitHub</h3>
+      <div class="space-y-4 text-gray-300">
+        <p>1 Crea un nuevo repositorio desde <span class="font-bold">New Repository</span>.</p>
+        <p>2 Conéctalo desde tu terminal con:</p>
+        <pre class="bg-black/50 p-4 rounded-lg text-purple-300 overflow-x-auto"><code>
+git init
+git remote add origin https://github.com/tu-usuario/tu-repo.git
+git add .
+git commit -m "Mi primer commit"
+git push -u origin main
+        </code></pre>
+        <p>3 ¡Listo! Tu proyecto ya vive en la nube y cualquiera puede verlo.</p>
+      </div>
+    </section>
+
+    <!-- Recursos -->
+    <section class="mb-20 fade-in">
+      <h3 class="text-3xl font-bold text-purple-300 mb-6"> Recursos oficiales y ayuda</h3>
+      <ul class="space-y-3 text-gray-300 text-lg">
+        <li><a href="https://docs.github.com/es" target="_blank" class="text-purple-400 underline">📖 Documentación oficial de GitHub</a></li>
+        <li><a href="https://education.github.com/pack" target="_blank" class="text-purple-400 underline">🎓 GitHub Student Pack</a> (beneficios para estudiantes)</li>
+        <li><a href="https://skills.github.com/" target="_blank" class="text-purple-400 underline">💡 GitHub Skills</a> (tutoriales prácticos paso a paso)</li>
+      </ul>
+    </section>
+
+    <!-- Motivación -->
+    <section class="text-center mb-20 fade-in">
+      <h3 class="text-3xl font-bold text-purple-400 mb-4"> Tú también puedes</h3>
+      <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+        Cada línea de código que subes a <span class="text-purple-400">GitHub</span> es un paso hacia tu futuro.  
+        No importa si empiezas con proyectos pequeños: lo importante es comenzar.  
+        ¡El mundo de la programación te espera, y esta es tu puerta de entrada!
+      </p>
+    </section>
+
+    <!-- Botón extra centrado -->
+    <div class="mt-10 flex justify-center">
+      <a href="https://github.com/Wikkl20" target="_blank"
+        class="px-6 py-3 bg-purple-700 rounded-xl font-bold hover:bg-purple-400 hover:text-black transition transform hover:scale-105">
+         Ver repositorio
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-purple-900/90 text-center py-10 mt-16">
+    <p>✉️ Correo: <span class="font-bold">t01267f@ms.upla.edu.pe</span></p>
+    <p>🌐 GitHub: <a href="https://github.com/Wikkl20" target="_blank" class="text-purple-400 underline">Wikkl20</a></p>
+  </footer>
+
+  <!-- Script partículas + animaciones -->
+  <script>
+    // Partículas
+    const canvas = document.getElementById('bgCanvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    const particleCount = 80;
+    let mouse = { x: null, y: null };
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    for (let i = 0; i < particleCount; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: 2 + Math.random() * 3,
+        dx: (Math.random() - 1.5) * 1.5,
+        dy: (Math.random() - 1.5) * 1.5
+      });
+    }
+
+    function drawParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "#a855f7";
+      particles.forEach(p => {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fill();
+      });
+    }
+
+    function updateParticles() {
+      particles.forEach(p => {
+        p.x += p.dx;
+        p.y += p.dy;
+        if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+
+        if (mouse.x && mouse.y) {
+          let dx = p.x - mouse.x;
+          let dy = p.y - mouse.y;
+          let dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 100) {
+            p.x += dx / dist;
+            p.y += dy / dist;
+          }
+        }
+      });
+    }
+
+    function animate() {
+      drawParticles();
+      updateParticles();
+      requestAnimationFrame(animate);
+    }
+    animate();
+
+    window.addEventListener('mousemove', e => {
+      mouse.x = e.x;
+      mouse.y = e.y;
+    });
+
+    // Animaciones scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    });
+    faders.forEach(fader => observer.observe(fader));
+
+    // Texto máquina de escribir
+    const typingContainer = document.getElementById("typing-container");
+    const frases = ["Colabora con el mundo", "Crea tu portafolio profesional", "Haz crecer tus proyectos"];
+    let fraseIndex = 0;
+
+    function typeWriter(text, i, callback) {
+      if (i < text.length) {
+        typingContainer.innerHTML = `<span class="typing">${text.substring(0, i + 1)}</span>`;
+        setTimeout(() => typeWriter(text, i + 1, callback), 100);
+      } else if (typeof callback === "function") {
+        setTimeout(callback, 1500);
+      }
+    }
+
+    function startTyping() {
+      typeWriter(frases[fraseIndex], 0, () => {
+        fraseIndex = (fraseIndex + 1) % frases.length;
+        startTyping();
+      });
+    }
+
+    startTyping();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Semana 3 - Desarrollo de Aplicaciones</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-black via-purple-950 to-black text-white flex flex-col min-h-screen relative">
+
+  <!-- Fondo decorativo -->
+  <div class="absolute inset-0 bg-[url('https://wallpapercave.com/wp/wp6204383.jpg')] bg-cover bg-center opacity-20"></div>
+
+  <!-- Encabezado con menú superior -->
+<header class="w-full bg-purple-800/90 shadow-lg z-20 sticky top-0">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <!-- Logo -->
+      <div class="flex items-center gap-4">
+        <img src="logo_uni.png" alt="Logo Universidad" class="w-14 h-14 object-contain">
+        <h1 class="text-2xl md:text-3xl font-bold drop-shadow-[0_0_15px_#a855f7]">
+          Desarrollo de Aplicaciones - Semana 3
+        </h1>
+      </div>
+  
+      <!-- Menú -->
+      <nav class="hidden md:flex gap-6 text-lg font-semibold">
+        <a href="index.html" class="hover:text-purple-300 transition">Inicio</a>
+        <a href="manual_git.html" class="hover:text-purple-300 transition">Manual Git</a>
+        <a href="manual_github.html" class="hover:text-purple-300 transition">Manual GitHub</a>
+        <a href="semana1.html" class="hover:text-purple-300 transition">Proyectos</a>
+      </nav>
+  
+    </div>
+  </header>
+  
+
+  <!-- Contenido principal con sidebar -->
+  <main class="flex flex-1 mt-8 z-10 px-6 gap-6 items-start max-w-6xl mx-auto w-full">
+
+    <!-- Barra lateral -->
+    <aside class="w-56 min-w-[14rem] bg-purple-900/40 backdrop-blur-md rounded-2xl shadow-xl p-4 border border-purple-700 flex flex-col gap-3 sticky top-24 h-auto max-h-[72vh] overflow-y-auto">
+      <h2 class="text-lg font-bold text-purple-300 mb-2 text-center">Semanas</h2>
+      <div class="flex flex-col gap-2">
+        <!-- Lista completa de semanas -->
+        <a href="semana1.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 1</a>
+        <a href="semana2.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 2</a>
+        <a href="semana3.html" class="px-3 py-2 bg-purple-400 text-black font-bold rounded-lg shadow-lg transition">Semana 3</a>
+        <a href="semana4.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 4</a>
+        <a href="semana5.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 5</a>
+        <a href="semana6.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 6</a>
+        <a href="semana7.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 7</a>
+        <a href="semana8.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 8... en curso</a>
+        <a href="semana9.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 9... en curso</a>
+        <a href="semana10.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 10... en curso</a>
+        <a href="semana11.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 11... en curso</a>
+        <a href="semana12.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 12... en curso</a>
+        <a href="semana13.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 13... en curso</a>
+        <a href="semana14.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 14... en curso</a>
+        <a href="semana15.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 15... en curso</a>
+        <a href="semana16.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 16... en curso</a>
+      </div>
+    </aside>
+
+    <!-- Área de contenido -->
+    <section class="flex-1 space-y-10">
+
+      <!-- Introducción -->
+      <div class="bg-purple-900/40 rounded-2xl shadow-xl p-8 border border-purple-700">
+        <h2 class="text-2xl md:text-3xl font-bold text-purple-300 mb-4 text-center"> Introducción a la Semana 3</h2>
+        <p class="text-lg leading-relaxed text-justify">
+          En la tercera semana nos adentramos en la <b>Programación Orientada a Objetos (POO)</b> con 
+          <b>Java y Apache NetBeans (Maven)</b>. 
+          Los proyectos de esta semana fortalecen el uso de clases, atributos y métodos, aplicando
+          principios de <b>encapsulamiento</b> y <b>modularidad</b>.
+        </p>
+        <p class="text-lg leading-relaxed text-justify mt-4">
+          Se desarrollaron dos ejercicios prácticos: una <i>tienda de productos</i> y una <i>empresa de transportes</i>, 
+          ambos con lógica de negocio orientada a objetos, diagramas UML y validaciones de entrada de datos.
+        </p>
+      </div>
+
+      <!-- Actividad 01 -->
+      <div class="bg-purple-900/40 rounded-2xl shadow-xl p-8 border border-purple-700">
+        <h2 class="text-xl font-bold text-purple-300 mb-4"> Actividad 01: Tienda de productos</h2>
+        <p class="text-justify mb-4">
+          Se modela una <b>tienda</b> que vende productos por docenas. El descuento depende de la cantidad:
+          <b>20% si son 10 o más docenas</b>, de lo contrario <b>10%</b>. 
+          Además, si el importe a pagar es ≥ S/.200, la tienda obsequia <b>2 lapiceros por cada docena</b>.
+        </p>
+        <pre class="bg-black/50 p-4 rounded-lg text-purple-300 text-sm overflow-x-auto"><code>
+public class Producto {
+    private double precioDocena;
+    private int cantidad;
+
+    public Producto(double precioDocena, int cantidad) {
+        this.precioDocena = precioDocena;
+        this.cantidad = cantidad;
+    }
+
+    public double calcularImporte() { return precioDocena * cantidad; }
+    public double calcularDescuento() { return calcularImporte() * (cantidad >= 10 ? 0.20 : 0.10); }
+    public double calcularPago() { return calcularImporte() - calcularDescuento(); }
+    public int calcularLapiceros() { return calcularPago() >= 200 ? 2 * cantidad : 0; }
+}
+        </code></pre>
+        <p class="text-sm text-gray-300 mt-2"> El diseño permite calcular de forma clara el importe, descuentos y obsequios.</p>
+      </div>
+
+      <!-- Actividad 02 -->
+      <div class="bg-purple-900/40 rounded-2xl shadow-xl p-8 border border-purple-700">
+        <h2 class="text-xl font-bold text-purple-300 mb-4"> Actividad 02: Empresa de transportes</h2>
+        <p class="text-justify mb-4">
+          Una empresa de transportes vende pasajes con un <b>precio fijo de S/.37.5</b>. 
+          Si se compran <b>15 o más pasajes</b>, el descuento es del <b>8%</b>, de lo contrario del <b>5%</b>. 
+          Además, si el pago supera los S/.200, la empresa regala <b>2 caramelos por cada pasaje</b>.
+        </p>
+        <pre class="bg-black/50 p-4 rounded-lg text-purple-300 text-sm overflow-x-auto"><code>
+public class Pasaje {
+    private String turno;
+    private int cantidad;
+    private final double precioUnitario = 37.5;
+
+    public Pasaje(String turno, int cantidad) {
+        this.turno = turno;
+        this.cantidad = cantidad;
+    }
+
+    public double calcularImporte() { return precioUnitario * cantidad; }
+    public double calcularDescuento() { return calcularImporte() * (cantidad >= 15 ? 0.08 : 0.05); }
+    public double calcularPago() { return calcularImporte() - calcularDescuento(); }
+    public int calcularCaramelos() { return calcularPago() > 200 ? 2 * cantidad : 0; }
+}
+        </code></pre>
+        <p class="text-sm text-gray-300 mt-2"> Se encapsula la lógica en métodos, facilitando la reutilización y el mantenimiento.</p>
+      </div>
+
+      <!-- Botones navegación -->
+      <div class="flex justify-between">
+        <a href="semana2.html" class="px-6 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-400 hover:text-black transition">⬅️ Semana 2</a>
+        <a href="index.html" class="px-6 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-400 hover:text-black transition"> Volver a Inicio</a>
+        <a href="https://github.com/Wikkl20/DDA_Semana3" target="_blank" class="px-6 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-400 hover:text-black transition"> Ver en GitHub</a>
+        <a href="semana4.html" class="px-6 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-400 hover:text-black transition">➡️ Semana 4</a>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full bg-purple-900/90 text-center py-6 mt-12 z-10">
+    <p class="text-sm md:text-base">📱 Contacto: <span class="font-bold">900385966</span></p>
+    <p class="text-sm md:text-base">✉️ Correo: <span class="font-bold">t01267f@ms.upla.edu.pe</span></p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Semana 2 - Desarrollo de Aplicaciones</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Animaciones */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease-in-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Efecto typing */
+    .typing {
+      border-right: 3px solid #a855f7;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 4s steps(40, end), blink .8s infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-black via-purple-950 to-black text-white flex flex-col min-h-screen relative">
+
+  <!-- Fondo decorativo -->
+  <div class="absolute inset-0 bg-[url('https://wallpapercave.com/wp/wp6204383.jpg')] bg-cover bg-center opacity-20"></div>
+
+  <!-- NAVBAR SUPERIOR -->
+  <header class="fixed top-0 left-0 w-full bg-purple-900/90 backdrop-blur-md z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <img src="logo_uni.png" alt="Logo Universidad" class="w-12 h-12 object-contain">
+        <span class="font-bold text-purple-300 text-xl">UPLA</span>
+      </div>
+      <!-- Título central -->
+      <h1 class="text-2xl md:text-3xl font-bold text-purple-200 drop-shadow-[0_0_15px_#a855f7]">
+         Semana 2 - Desarrollo de Aplicaciones
+      </h1>
+      <!-- Menú -->
+      <nav class="flex gap-4 text-sm md:text-base font-semibold">
+        <a href="index.html" class="hover:text-purple-400">Inicio</a>
+        <a href="manual_git.html" class="hover:text-purple-400">Git</a>
+        <a href="manual_github.html" class="hover:text-purple-400">GitHub</a>
+        <a href="index.html#proyectos" class="hover:text-purple-400">Proyectos</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="flex flex-1 mt-28 z-10 px-6 gap-6 items-start max-w-7xl mx-auto w-full">
+
+    <!-- SIDEBAR DE SEMANAS -->
+    <aside class="w-56 min-w-[14rem] bg-purple-900/50 backdrop-blur-md rounded-2xl shadow-xl p-4 border border-purple-700 flex flex-col gap-3 sticky top-28 h-[75vh] overflow-y-auto text-sm font-semibold">
+      <h2 class="text-lg font-bold text-purple-300 mb-2 text-center"> Semanas</h2>
+      <div class="flex flex-col gap-2">
+        <a href="semana1.html"  class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 1</a>
+        <a href="semana2.html"  class="px-3 py-2 bg-purple-400 text-black font-bold rounded-lg shadow-md">Semana 2</a>
+        <a href="semana3.html"  class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 3</a>
+        <a href="semana4.html"  class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 4</a>
+        <a href="semana5.html"  class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 5</a>
+        <a href="semana6.html"  class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 6</a>
+        <a href="semana7.html"  class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 7</a>
+        <a href="semana8.html"  class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 8... en curso</a>
+        <a href="semana9.html"  class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 9... en curso</a>
+        <a href="semana10.html" class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 10... en curso</a>
+        <a href="semana11.html" class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 11... en curso</a>
+        <a href="semana12.html" class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 12... en curso</a>
+        <a href="semana13.html" class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 13... en curso</a>
+        <a href="semana14.html" class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 14... en curso</a>
+        <a href="semana15.html" class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 15... en curso</a>
+        <a href="semana16.html" class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 16... en curso</a>
+      </div>
+    </aside>
+
+    <!-- CONTENIDO DE LA SEMANA -->
+    <section class="flex-1 space-y-12">
+
+      <!-- Introducción -->
+      <div class="bg-purple-900/40 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-purple-700 fade-in">
+        <h2 class="text-3xl font-bold text-purple-300 mb-4 text-center"> Introducción a la Semana 2</h2>
+        <p class="typing text-lg leading-relaxed text-center text-purple-200 font-bold">
+           Domina condicionales en Java y crea apps más inteligentes.
+        </p>
+        <p class="text-lg leading-relaxed text-justify mt-6">
+          En esta segunda semana se trabajaron problemas aplicando <b>estructuras condicionales</b> 
+          y <b>validación de datos</b> en <b>Java con Apache NetBeans</b>.  
+          Los ejercicios refuerzan el diseño modular, dividiendo el proyecto en paquetes 
+          (<i>Main</i> e <i>IUG</i>), y asegurando que la interacción con el usuario sea 
+          clara y segura mediante validaciones.
+        </p>
+      </div>
+
+      <!-- Problema 1 -->
+      <div class="bg-purple-900/40 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-purple-700 fade-in">
+        <h2 class="text-2xl font-bold text-purple-300 mb-4"> Actividad 01: Tienda de Docenas</h2>
+        <p class="text-lg text-justify mb-4">
+          Se calcula el importe de la compra aplicando descuentos según las docenas adquiridas:  
+          <b>20% si son 10 o más</b>, o <b>10%</b> si son menos.  
+          Además, si el importe ≥ S/.200, se otorgan <b>2 lapiceros por cada docena</b>.  
+          El sistema valida entradas correctas y muestra importe total, descuento, pago final y obsequios.
+        </p>
+        <!-- Diagrama Problema 1 -->
+<div class="bg-purple-900/40 backdrop-blur-md rounded-2xl shadow-xl p-6 border border-purple-700 mt-6">
+  <h3 class="text-xl font-bold text-purple-300 mb-3">Diagrama de Clases — Problema 1</h3>
+  <pre class="bg-black/50 p-4 rounded-lg text-purple-300 text-sm overflow-x-auto"><code>
+class Producto {
+  - precioDocena: double
+  - cantidad: int
+  + calcularImporte(): double
+  + calcularDescuento(): double
+  + calcularPago(): double
+  + calcularLapiceros(): int
+}
+
+class Tienda {
+  + vender(p: Producto)
+}
+  </code></pre>
+  <p class="text-sm text-gray-300 mt-2">
+    El diseño encapsula los cálculos en la clase <i>Producto</i>, incluyendo importe,
+    descuentos y obsequios. La clase <i>Tienda</i> representa el proceso de venta,
+    utilizando los datos del producto.
+  </p>
+</div>
+      </div>
+
+
+
+      <!-- Problema 2 -->
+      <div class="bg-purple-900/40 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-purple-700 fade-in">
+        <h2 class="text-2xl font-bold text-purple-300 mb-4"> Actividad 02: Sueldo de Empleado</h2>
+        <p class="text-lg text-justify mb-4">
+          Se calcula el sueldo de un empleado considerando:  
+          <b>Sueldo básico</b> (horas × tarifa según categoría),  
+          <b>bonificación por hijos</b> (S/.40.5 hasta 3 hijos, luego S/.35),  
+          y <b>descuento por ley</b> (13.5% si ≥ 3500, caso contrario 10%).  
+          El programa presenta sueldo básico, bruto, descuento y sueldo neto.
+        </p>
+              <!-- Diagrama Problema 2 -->
+<div class="bg-purple-900/40 backdrop-blur-md rounded-2xl shadow-xl p-6 border border-purple-700 mt-6">
+  <h3 class="text-xl font-bold text-purple-300 mb-3">Diagrama de Clases — Problema 2</h3>
+  <pre class="bg-black/50 p-4 rounded-lg text-purple-300 text-sm overflow-x-auto"><code>
+class Empleado {
+  - categoria: char
+  - horasTrabajadas: int
+  - numHijos: int
+  + calcularSueldoBasico(): double
+  + calcularBonificacion(): double
+  + calcularSueldoBruto(): double
+  + calcularDescuento(): double
+  + calcularSueldoNeto(): double
+}
+
+class Empresa {
+  + procesarEmpleado(e: Empleado)
+}
+  </code></pre>
+  <p class="text-sm text-gray-300 mt-2">
+    La clase <i>Empleado</i> gestiona todos los cálculos salariales: sueldo básico,
+    bonificación, descuento y sueldo neto. La clase <i>Empresa</i> puede administrar
+    múltiples empleados para procesar sus pagos.
+  </p>
+</div>
+      </div>
+
+
+
+      <!-- Navegación -->
+      <div class="flex justify-between fade-in">
+        <a href="semana1.html" class="px-6 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-400 hover:text-black transition transform hover:scale-105">
+          ⬅️ Semana 1
+        </a>
+        <a href="index.html" class="px-6 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-400 hover:text-black transition transform hover:scale-105">
+           Inicio
+        </a>
+        <a href="https://github.com/Wikkl20/DDA_Semana2" target="_blank"
+          class="px-6 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-400 hover:text-black transition transform hover:scale-105">
+           Ver en GitHub
+        </a>
+        <a href="semana3.html" class="px-6 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-400 hover:text-black transition transform hover:scale-105">
+          ➡️ Semana 3
+        </a>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full bg-purple-900/90 text-center py-6 mt-12 z-10">
+    <p class="text-sm md:text-base">📱 Contacto: <span class="font-bold">900385966</span></p>
+    <p class="text-sm md:text-base">✉️ Correo: <span class="font-bold">t01267f@ms.upla.edu.pe</span></p>
+  </footer>
+
+  <!-- Script fade-in -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+    faders.forEach(fader => observer.observe(fader));
+  </script>
+
+</body>
+</html>

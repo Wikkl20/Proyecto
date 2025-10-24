@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manual de Git - Supere tus Límites</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <style>
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      background: rgb(0, 0, 0); /* Fondo negro puro */
+    }
+
+    /* Canvas partículas */
+    #particles {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* Efecto máquina de escribir */
+    .typewriter {
+      display: inline-block;
+      border-right: 2px solid #753aac;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: blink 0.7s infinite;
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    /* Animación al hacer scroll */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-in-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fondo partículas -->
+  <canvas id="particles"></canvas>
+
+ <!-- Navbar -->
+<header class="fixed top-0 left-0 w-full bg-purple-900/70 backdrop-blur-md z-50 shadow-lg border-b border-purple-700">
+  <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+    <!-- Logo + título -->
+    <div class="flex items-center gap-3">
+      <img src="logo_uni.png" alt="Logo UPLA" class="w-12 h-12 object-contain">
+      <div class="flex flex-col leading-tight">
+        <span class="font-bold text-purple-300 text-sm md:text-base">UPLA</span>
+        <span class="text-xs text-gray-300 hidden md:inline">Ingeniería de Sistemas y Computación</span>
+      </div>
+    </div>
+
+    <!-- Mensaje central -->
+    <div class="hidden md:flex items-center justify-center">
+      <div class="px-4 py-2 rounded-full bg-gradient-to-r from-indigo-700/20 via-purple-700/15 to-pink-700/10 backdrop-blur-sm border border-purple-600/30">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 via-purple-300 to-pink-300 font-semibold">
+          Manual de Git — Aprende y Aplica
+        </span>
+      </div>
+    </div>
+
+    <!-- Menú -->
+    <nav class="flex gap-6 text-sm">
+      <a href="index.html" class="hover:text-purple-400 font-semibold transition">Inicio</a>
+      <a href="#que-es" class="hover:text-purple-400 font-semibold transition">¿Qué es Git?</a>
+      <a href="#instalacion" class="hover:text-purple-400 font-semibold transition">Instalación</a>
+      <a href="#uso-basico" class="hover:text-purple-400 font-semibold transition">Uso Básico</a>
+      <a href="#recursos" class="hover:text-purple-400 font-semibold transition">Recursos</a>
+    </nav>
+  </div>
+</header>
+
+  <!-- Hero -->
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-28">
+  <h1 class="text-5xl md:text-6xl font-extrabold text-purple-400 drop-shadow-[0_0_35px_#a855f7] mb-6 fade-in">
+  Manual de Git
+</h1>
+  <p class="text-lg md:text-xl max-w-3xl text-gray-200 fade-in mb-8 leading-relaxed">
+    Aprende a versionar tu código y colabora como un profesional.  
+    <span class="typewriter text-purple-400 font-bold">¡Tu viaje en programación comienza aquí!</span>
+  </p>
+
+  <!-- Animación estilo portada -->
+  <lottie-player 
+    src="https://assets9.lottiefiles.com/packages/lf20_4kx2q32n.json" 
+    background="transparent" 
+    speed="1" 
+    style="width:280px;height:280px;" 
+    loop 
+    autoplay>
+  </lottie-player>
+
+  <a href="#contenido" 
+     class="mt-10 px-10 py-4 bg-gradient-to-r from-purple-600 to-pink-500 text-white font-bold rounded-full shadow-lg hover:scale-110 transition">
+    🚀 Empezar Ahora
+  </a>
+</section>
+
+  <!-- ¿Qué es Git? -->
+  <section id="que-es" class="max-w-6xl mx-auto px-6 py-20 fade-in">
+    <h2 class="text-3xl font-bold text-purple-300 mb-6">¿Qué es Git?</h2>
+    <div class="bg-black/50 rounded-2xl p-8 shadow-lg border border-purple-600">
+      <p class="text-lg leading-relaxed text-gray-300">
+        Git es un <span class="font-bold text-purple-400">sistema de control de versiones</span> creado por 
+        <span class="font-bold">Linus Torvalds</span>. Te permite registrar la historia de tu proyecto, 
+        trabajar en equipo y probar ideas sin miedo a perder tu trabajo.
+      </p>
+      <blockquote class="mt-6 p-4 bg-purple-900/40 rounded-lg border-l-4 border-purple-500 italic text-gray-200">
+        ✨ “Con Git no solo escribes código, escribes historia”.
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Instalación -->
+ <section id="instalacion" class="max-w-6xl mx-auto px-6 py-20 fade-in">
+  <h2 class="text-3xl font-bold text-purple-300 mb-10 text-center drop-shadow-[0_0_15px_#9333ea]">
+  Instalación de Git
+</h2>
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="bg-purple-900/40 p-8 rounded-2xl shadow-lg hover:scale-105 transition text-center">
+     <h3 class="text-xl font-bold text-purple-300 mb-3">Windows</h3>
+      <a href="https://git-scm.com/download/win" target="_blank"
+         class="btn-glow inline-block mt-2 px-5 py-2">⬇️ Descargar</a>
+    </div>
+    <div class="bg-purple-900/40 p-8 rounded-2xl shadow-lg hover:scale-105 transition text-center">
+      <h3 class="text-xl font-bold text-purple-300 mb-3"> Linux</h3>
+      <pre class="bg-black/60 p-3 rounded text-gray-200 text-left">sudo apt install git</pre>
+    </div>
+    <div class="bg-purple-900/40 p-8 rounded-2xl shadow-lg hover:scale-105 transition text-center">
+      <h3 class="text-xl font-bold text-purple-300 mb-3">macOS</h3>
+      <pre class="bg-black/60 p-3 rounded text-gray-200 text-left">brew install git</pre>
+    </div>
+  </div>
+</section>
+
+  <!-- Uso básico -->
+  <section id="uso-basico" class="max-w-6xl mx-auto px-6 py-20 fade-in">
+    <h2 class="text-3xl font-bold text-purple-300 mb-10"> Comandos Básicos</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-black/50 p-6 rounded-xl shadow-lg border border-purple-600">
+        <h3 class="text-lg font-bold text-purple-300"> Inicializar repositorio</h3>
+        <pre class="bg-purple-900/40 p-3 rounded">git init</pre>
+      </div>
+      <div class="bg-black/50 p-6 rounded-xl shadow-lg border border-purple-600">
+        <h3 class="text-lg font-bold text-purple-300"> Agregar archivos</h3>
+        <pre class="bg-purple-900/40 p-3 rounded">git add .</pre>
+      </div>
+      <div class="bg-black/50 p-6 rounded-xl shadow-lg border border-purple-600">
+        <h3 class="text-lg font-bold text-purple-300"> Guardar cambios</h3>
+        <pre class="bg-purple-900/40 p-3 rounded">git commit -m "mensaje"</pre>
+      </div>
+      <div class="bg-black/50 p-6 rounded-xl shadow-lg border border-purple-600">
+        <h3 class="text-lg font-bold text-purple-300"> Subir a GitHub</h3>
+        <pre class="bg-purple-900/40 p-3 rounded">git push origin main</pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recursos -->
+  <section id="recursos" class="max-w-6xl mx-auto px-6 py-20 fade-in">
+    <h2 class="text-3xl font-bold text-purple-300 mb-6"> Recursos Recomendados</h2>
+    <ul class="space-y-4 text-lg">
+      <li> <a href="https://git-scm.com/" target="_blank" class="text-purple-400 underline">Página oficial de Git</a></li>
+      <li> <a href="https://git-scm.com/doc" target="_blank" class="text-purple-400 underline">Documentación oficial</a></li>
+      <li> <a href="https://learngitbranching.js.org/" target="_blank" class="text-purple-400 underline">Learn Git Branching (interactivo)</a></li>
+      <li> <a href="https://www.atlassian.com/es/git/tutorials" target="_blank" class="text-purple-400 underline">Tutorial en español (Atlassian)</a></li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black/80 text-center py-10 mt-20 border-t border-purple-500">
+    <p class="text-gray-400">💡 Kimberly Casimiro | Huancayo | 2025</p>
+    <a href="index.html" class="mt-4 inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-500 rounded-full font-bold hover:scale-110 transition">⬅️ Volver al Inicio</a>
+  </footer>
+
+
+
+
+  <!-- Script scroll reveal -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    });
+    faders.forEach(fader => observer.observe(fader));
+  </script>
+
+  <!-- Script partículas moradas -->
+  <script>
+    const canvas = document.getElementById("particles");
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let particlesArray = [];
+    const color = "#a855f7"; // Morado brillante
+
+    const mouse = { x: null, y: null, radius: 150 };
+
+    window.addEventListener("mousemove", function(e) {
+      mouse.x = e.x;
+      mouse.y = e.y;
+    });
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = (Math.random() * 2 + 1) * 1.6; // 60% más grandes
+        this.color = color;
+        this.speedX = (Math.random() - 1.5) * 1.2;
+        this.speedY = (Math.random() - 1.5) * 1.2;
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+
+        if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+        if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+
+        // Interacción con mouse
+        let dx = mouse.x - this.x;
+        let dy = mouse.y - this.y;
+        let distance = Math.sqrt(dx * dx + dy * dy);
+        if (distance < mouse.radius) {
+          this.x -= dx / 20;
+          this.y -= dy / 20;
+        }
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.shadowBlur = 15;
+        ctx.shadowColor = this.color;
+        ctx.fill();
+      }
+    }
+
+    function initParticles() {
+      particlesArray = [];
+      for (let i = 0; i < 100; i++) {
+        particlesArray.push(new Particle());
+      }
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particlesArray.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animateParticles);
+    }
+
+    window.addEventListener("resize", () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      initParticles();
+    });
+
+    initParticles();
+    animateParticles();
+  </script>
+
+</body>
+</html>

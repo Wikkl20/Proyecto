@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Semana 6 - Desarrollo de Aplicaciones</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-black via-purple-950 to-black text-white flex flex-col min-h-screen relative">
+
+  <!-- Fondo -->
+  <div class="absolute inset-0 bg-[url('https://wallpapercave.com/wp/wp6204383.jpg')] bg-cover bg-center opacity-20"></div>
+
+  <!-- Encabezado -->
+  <header class="w-full bg-purple-800/90 shadow-lg z-20 sticky top-0">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <div class="flex items-center gap-4">
+        <img src="logo_uni.png" alt="Logo Universidad" class="w-14 h-14 object-contain">
+        <h1 class="text-2xl md:text-3xl font-bold drop-shadow-[0_0_15px_#a855f7]">
+          Desarrollo de Aplicaciones - Semana 6
+        </h1>
+      </div>
+      <nav class="hidden md:flex gap-6 text-lg font-semibold">
+        <a href="index.html" class="hover:text-purple-300 transition">Inicio</a>
+        <a href="manual_git.html" class="hover:text-purple-300 transition">Manual Git</a>
+        <a href="manual_github.html" class="hover:text-purple-300 transition">Manual GitHub</a>
+        <a href="semana1.html" class="hover:text-purple-300 transition">Proyectos</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido -->
+  <main class="flex flex-1 mt-8 z-10 px-6 gap-6 items-start max-w-6xl mx-auto w-full">
+
+    <!-- Sidebar -->
+    <aside class="w-56 min-w-[14rem] bg-purple-900/40 backdrop-blur-md rounded-2xl shadow-xl p-4 border border-purple-700 flex flex-col gap-3 sticky top-24 h-auto max-h-[72vh] overflow-y-auto">
+      <h2 class="text-lg font-bold text-purple-300 mb-2 text-center">Semanas</h2>
+      <div class="flex flex-col gap-2">
+        <a href="semana1.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 1</a>
+        <a href="semana2.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 2</a>
+        <a href="semana3.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 3</a>
+        <a href="semana4.html" class="px-3 py-2 bg-purple-400 text-black font-bold rounded-lg shadow-lg transition">Semana 4</a>
+        <a href="semana5.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 5</a>
+        <a href="semana6.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 6</a>
+        <a href="semana7.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 7</a>
+        <a href="semana8.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 8... en curso</a>
+        <a href="semana9.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 9... en curso</a>
+        <a href="semana10.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 10... en curso</a>
+        <a href="semana11.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 11... en curso</a>
+        <a href="semana12.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 12... en curso</a>
+        <a href="semana13.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 13... en curso</a>
+        <a href="semana14.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 14... en curso</a>
+        <a href="semana15.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 15... en curso</a>
+        <a href="semana16.html" class="px-3 py-2 bg-purple-700 text-white font-bold rounded-lg shadow-lg hover:bg-purple-400 hover:text-black transition">Semana 16... en curso</a>
+      </div>
+    </aside>
+
+    <!-- Área de contenido -->
+    <section class="flex-1 space-y-10">
+
+      <!-- Introducción -->
+      <div class="bg-purple-900/40 rounded-2xl shadow-xl p-8 border border-purple-700">
+        <h2 class="text-2xl md:text-3xl font-bold text-purple-300 mb-4 text-center"> Introducción a la Semana 6</h2>
+        <p class="text-lg leading-relaxed text-justify">
+          En esta semana desarrollamos la aplicación <b>Agua Clara</b> utilizando <b>Java y MySQL</b> con la arquitectura <b>MVC</b>. El proyecto se centra en la gestión de datos de clientes, incluyendo operaciones de registro, actualización, eliminación y consulta, implementadas mediante una base de datos relacional y una interfaz gráfica.
+        </p>
+      </div>
+
+      <!-- Actividad 01 -->
+      <div class="bg-purple-900/40 rounded-2xl shadow-xl p-8 border border-purple-700">
+        <h2 class="text-xl font-bold text-purple-300 mb-4">Actividad 01: Gestión de Clientes</h2>
+        <p class="text-justify mb-4">
+          La aplicación <b>Agua Clara</b> permite gestionar información de clientes, incluyendo su <b>nombre, dirección, teléfono y consumo de agua</b>. Se implementó una base de datos en <b>MySQL</b> para almacenar los datos y operaciones CRUD (Crear, Leer, Actualizar, Eliminar) utilizando el patrón <b>MVC</b> con paquetes <code>modelo</code>, <code>vista</code> y <code>controlador</code>.
+        </p>
+        <pre class="bg-black/50 p-4 rounded-lg text-indigo-300 text-sm overflow-x-auto"><code>
+package modelo;
+
+public class Cliente {
+    private int id;
+    private String nombre;
+    private String direccion;
+    private String telefono;
+    private double consumo;
+
+    public Cliente(int id, String nombre, String direccion, String telefono, double consumo) {
+        this.id = id;
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.consumo = consumo;
+    }
+
+    // Getters y Setters
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
+    public String getDireccion() { return direccion; }
+    public void setDireccion(String direccion) { this.direccion = direccion; }
+    public String getTelefono() { return telefono; }
+    public void setTelefono(String telefono) { this.telefono = telefono; }
+    public double getConsumo() { return consumo; }
+    public void setConsumo(double consumo) { this.consumo = consumo; }
+}
+        </code></pre>
+        <p class="text-sm text-gray-300 mt-2">La vista muestra formularios para ingresar y consultar datos, mientras el controlador gestiona la lógica y la conexión con la base de datos.</p>
+      </div>
+
+      <!-- Actividad 02 -->
+      <div class="bg-purple-900/40 rounded-2xl shadow-xl p-8 border border-purple-700">
+        <h2 class="text-xl font-bold text-purple-300 mb-4">Actividad 02: Conexión a Base de Datos</h2>
+        <p class="text-justify mb-4">
+          Se implementó una conexión a una base de datos <b>MySQL</b> para realizar operaciones CRUD en la tabla de clientes. La clase de conexión utiliza <b>JDBC</b> para interactuar con la base de datos, permitiendo registrar, actualizar, eliminar y consultar información de los clientes de manera eficiente.
+        </p>
+        <pre class="bg-black/50 p-4 rounded-lg text-indigo-300 text-sm overflow-x-auto"><code>
+package controlador;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class Conexion {
+    private Connection conn;
+    private String url = "jdbc:mysql://localhost:3306/agua_clara";
+    private String user = "root";
+    private String pass = "";
+
+    public Connection conectar() {
+        try {
+            conn = DriverManager.getConnection(url, user, pass);
+            System.out.println("Conexión exitosa");
+            return conn;
+        } catch (SQLException e) {
+            System.out.println("Error de conexión: " + e.getMessage());
+            return null;
+        }
+    }
+
+    public void desconectar() {
+        try {
+            if (conn != null) {
+                conn.close();
+                System.out.println("Conexión cerrada");
+            }
+        } catch (SQLException e) {
+            System.out.println("Error al cerrar conexión: " + e.getMessage());
+        }
+    }
+}
+        </code></pre>
+        <p class="text-sm text-gray-300 mt-2">El controlador utiliza esta clase para gestionar todas las operaciones de la base de datos, asegurando una interacción fluida entre la interfaz y los datos.</p>
+      </div>
+
+      <!-- Navegación -->
+      <div class="flex justify-between">
+        <a href="semana5.html" class="px-6 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-400 hover:text-black transition">⬅️ Semana 5</a>
+        <a href="index.html" class="px-6 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-400 hover:text-black transition"> Inicio</a>
+        <a href="https://github.com/Wikkl20/DDA_Semana6" target="_blank" class="px-6 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-400 hover:text-black transition"> Ver en GitHub</a>
+        <a href="semana7.html" class="px-6 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-400 hover:text-black transition">➡️ Semana 7</a>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full bg-purple-900/90 text-center py-6 mt-12 z-10">
+    <p class="text-sm md:text-base">📱 Contacto: <span class="font-bold">900385966</span></p>
+    <p class="text-sm md:text-base">✉️ Correo: <span class="font-bold">t01267f@ms.upla.edu.pe</span></p>
+  </footer>
+
+</body>
+</html>

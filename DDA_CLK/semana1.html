@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Semana 1 - Desarrollo de Aplicaciones</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Animaciones */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease-in-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Efecto typing */
+    .typing {
+      border-right: 3px solid #a855f7;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 4s steps(40, end), blink .8s infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-black via-purple-950 to-black text-white flex flex-col min-h-screen relative">
+
+  <!-- Fondo decorativo -->
+  <div class="absolute inset-0 bg-[url('https://wallpapercave.com/wp/wp6204383.jpg')] bg-cover bg-center opacity-20"></div>
+
+  <!-- NAVBAR SUPERIOR -->
+  <header class="fixed top-0 left-0 w-full bg-purple-900/90 backdrop-blur-md z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <img src="logo_uni.png" alt="Logo Universidad" class="w-12 h-12 object-contain">
+        <span class="font-bold text-purple-300 text-xl">UPLA</span>
+      </div>
+      <!-- Título central -->
+      <h1 class="text-2xl md:text-3xl font-bold text-purple-200 drop-shadow-[0_0_15px_#a855f7]">
+         Semana 1 - Desarrollo de Aplicaciones
+      </h1>
+      <!-- Menú -->
+      <nav class="flex gap-4 text-sm md:text-base font-semibold">
+        <a href="index.html" class="hover:text-purple-400">Inicio</a>
+        <a href="manual_git.html" class="hover:text-purple-400">Git</a>
+        <a href="manual_github.html" class="hover:text-purple-400">GitHub</a>
+        <a href="index.html#proyectos" class="hover:text-purple-400">Proyectos</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="flex flex-1 mt-28 z-10 px-6 gap-6 items-start max-w-7xl mx-auto w-full">
+
+    <!-- SIDEBAR DE SEMANAS -->
+    <aside class="w-56 min-w-[14rem] bg-purple-900/50 backdrop-blur-md rounded-2xl shadow-xl p-4 border border-purple-700 flex flex-col gap-3 sticky top-28 h-[75vh] overflow-y-auto text-sm font-semibold">
+      <h2 class="text-lg font-bold text-purple-300 mb-2 text-center"> Semanas</h2>
+      <div class="flex flex-col gap-2">
+
+        <!-- Generamos todas las semanas -->
+        <a href="semana1.html"  class="px-3 py-2 bg-purple-400 text-black font-bold rounded-lg shadow-md">Semana 1</a>
+        <a href="semana2.html"  class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 2</a>
+        <a href="semana3.html"  class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 3</a>
+        <a href="semana4.html"  class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 4</a>
+        <a href="semana5.html"  class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 5</a>
+        <a href="semana6.html"  class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 6</a>
+        <a href="semana7.html"  class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 7</a>
+        <a href="semana8.html"  class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 8... en curso</a>
+        <a href="semana9.html"  class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 9... en curso</a>
+        <a href="semana10.html" class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 10... en curso</a>
+        <a href="semana11.html" class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 11... en curso</a>
+        <a href="semana12.html" class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 12... en curso</a>
+        <a href="semana13.html" class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 13... en curso</a>
+        <a href="semana14.html" class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 14... en curso</a>
+        <a href="semana15.html" class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 15... en curso</a>
+        <a href="semana16.html" class="px-3 py-2 bg-purple-700 hover:bg-purple-400 hover:text-black rounded-lg">Semana 16... en curso</a>
+      </div>
+    </aside>
+
+    <!-- CONTENIDO DE LA SEMANA -->
+    <section class="flex-1 space-y-12">
+
+      <!-- Introducción -->
+      <div class="bg-purple-900/40 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-purple-700 fade-in">
+        <h2 class="text-3xl font-bold text-purple-300 mb-4 text-center"> Introducción a la Semana 1</h2>
+        <p class="typing text-lg leading-relaxed text-center text-purple-200 font-bold">
+          ¡Cada semana que avanzas, estás más cerca de ser un gran programador!
+        </p>
+        <p class="text-lg leading-relaxed text-justify mt-6">
+          En esta primera semana nos introducimos al uso de <b>interfaces gráficas en Java</b> utilizando 
+          <b>Apache NetBeans</b>. Los ejercicios desarrollados nos permiten conectar la lógica de programación 
+          con interfaces interactivas, aplicando <b>validaciones, cálculos y presentación clara de resultados</b>.
+        </p>
+      </div>
+
+      <!-- Problema 1 -->
+<div class="bg-purple-900/40 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-purple-700 fade-in">
+  <h2 class="text-2xl font-bold text-purple-300 mb-4"> Problema 1: Tienda de Camisas con Descuento 7% + 7%</h2>
+  <p class="text-lg text-justify mb-4">
+    Una tienda ha puesto en oferta la venta de <b>camisas</b> con un descuento especial por temporada de verano, denominado <b>7% + 7%</b>.  
+    Los cálculos deben realizarse de la siguiente forma:
+  </p>
+  <ul class="list-disc pl-6 text-gray-200 space-y-2">
+    <li>El importe de la compra es el precio de la camisa multiplicado por la cantidad adquirida.</li>
+    <li>El primer descuento es el <b>7% del importe</b> de la compra.</li>
+    <li>El segundo descuento es el <b>7%</b> de lo que queda después del primer descuento.</li>
+    <li>El descuento total es la suma de ambos descuentos.</li>
+    <li>El importe a pagar es igual al importe inicial menos el descuento total.</li>
+  </ul>
+ 
+<!-- Diagrama Problema 1 -->
+<div class="bg-purple-900/40 backdrop-blur-md rounded-2xl shadow-xl p-6 border border-purple-700 mt-6">
+  <h3 class="text-xl font-bold text-purple-300 mb-3">Diagrama de Clases — Problema 1</h3>
+ <pre class="bg-black/50 p-4 rounded-lg text-purple-300 text-sm overflow-x-auto"><code>
+class Camisa {
+  - precio: double
+  - cantidad: int
+  + calcularImporte(): double
+}
+
+class Descuento {
+  - porcentaje: double
+  + aplicar(): double
+}
+
+Camisa "1" *-- "1" Descuento
+  </pre>
+  <p class="text-sm text-gray-300 mt-2">
+    El diseño muestra cómo una <b>Camisa</b> se relaciona con un <b>Descuento</b>. 
+    La clase <i>Camisa</i> calcula el importe, mientras que <i>Descuento</i> aplica el porcentaje.
+  </p>
+</div>
+
+
+
+      
+<!-- Problema 2 -->
+<div class="bg-purple-900/40 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-purple-700 fade-in">
+  <h2 class="text-2xl font-bold text-purple-300 mb-4"> Problema 2: Presupuesto de Inversión en Feria</h2>
+  <p class="text-lg text-justify mb-4">
+    Una empresa participará en una feria y debe distribuir un monto total de inversión en distintos rubros.  
+    El programa debe calcular cuánto corresponde a cada rubro según los porcentajes establecidos:
+  </p>
+  <table class="w-full border-collapse border border-purple-700 text-center text-gray-200 my-4">
+    <thead class="bg-purple-800 text-purple-200">
+      <tr>
+        <th class="border border-purple-700 px-4 py-2">Rubro</th>
+        <th class="border border-purple-700 px-4 py-2">Porcentaje</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="border border-purple-700 px-4 py-2">Alquiler de espacio en la feria</td><td class="border border-purple-700 px-4 py-2">23%</td></tr>
+      <tr><td class="border border-purple-700 px-4 py-2">Publicidad</td><td class="border border-purple-700 px-4 py-2">7%</td></tr>
+      <tr><td class="border border-purple-700 px-4 py-2">Transporte</td><td class="border border-purple-700 px-4 py-2">26%</td></tr>
+      <tr><td class="border border-purple-700 px-4 py-2">Servicios feriales</td><td class="border border-purple-700 px-4 py-2">12%</td></tr>
+      <tr><td class="border border-purple-700 px-4 py-2">Decoración</td><td class="border border-purple-700 px-4 py-2">21%</td></tr>
+      <tr><td class="border border-purple-700 px-4 py-2">Gastos varios</td><td class="border border-purple-700 px-4 py-2">11%</td></tr>
+    </tbody>
+  </table>
+  <p class="text-gray-300 text-sm"> El programa recibe el monto total de inversión y devuelve cuánto dinero corresponde a cada rubro.</p>
+  
+  <!-- Diagrama Problema 2 -->
+<div class="bg-purple-900/40 backdrop-blur-md rounded-2xl shadow-xl p-6 border border-purple-700 mt-6">
+  <h3 class="text-xl font-bold text-purple-300 mb-3">Diagrama de Clases — Problema 2</h3>
+   <pre class="bg-black/50 p-4 rounded-lg text-purple-300 text-sm overflow-x-auto"><code>
+
+class Presupuesto {
+  - montoTotal: double
+  + distribuir(): void
+}
+
+class Rubro {
+  - nombre: String
+  - porcentaje: double
+  + calcularMonto(): double
+}
+
+Presupuesto "1" *-- "many" Rubro
+  </pre>
+  <p class="text-sm text-gray-300 mt-2">
+    Aquí la clase <b>Presupuesto</b> administra el monto total y lo distribuye en varios <b>Rubros</b> 
+    (espacio, publicidad, transporte, etc.), cada uno con su porcentaje definido.
+  </p>
+</div>
+
+</div>
+
+      <!-- Navegación -->
+      <div class="flex justify-between fade-in">
+        <a href="index.html" class="px-6 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-400 hover:text-black transition transform hover:scale-105">
+          ⬅️ Volver a Inicio
+        </a>
+        <a href="https://github.com/Wikkl20/Semana-1" target="_blank"
+          class="px-6 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-400 hover:text-black transition transform hover:scale-105">
+          🌐 Ver en GitHub
+        </a>
+        <a href="semana2.html" class="px-6 py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-400 hover:text-black transition transform hover:scale-105">
+          ➡️ Ir a Semana 2
+        </a>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full bg-purple-900/90 text-center py-6 mt-12 z-10">
+    <p class="text-sm md:text-base">📱 Contacto: <span class="font-bold">900385966</span></p>
+    <p class="text-sm md:text-base">✉️ Correo: <span class="font-bold">t01267f@ms.upla.edu.pe</span></p>
+  </footer>
+
+  <!-- Script para fade-in -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+    faders.forEach(fader => observer.observe(fader));
+  </script>
+
+</body>
+</html>
